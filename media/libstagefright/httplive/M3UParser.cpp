@@ -233,7 +233,7 @@ bool M3UParser::MediaGroup::getActiveURI(AString *uri) const {
         if (mSelectedIndex >= 0 && i == (size_t)mSelectedIndex) {
             const Media &item = mMediaItems.itemAt(i);
 
-            *uri = item.makeURL(baseURL);
+            *uri = item.mURI;
             return true;
         }
     }
